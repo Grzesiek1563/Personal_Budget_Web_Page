@@ -82,7 +82,7 @@ input[type=submit]:hover
     color: white;
 }
 
-#registrationForm
+.registrationAndLoginForm
 {
     margin-top: 5px;
 }
