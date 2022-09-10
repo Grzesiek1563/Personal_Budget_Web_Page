@@ -10,7 +10,7 @@ body
 {
     background-color: #E5D098;
     width: 320px;
-    padding: 45px 45px 45px 45px;
+    padding: 15px 45px 30px 45px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,8 +22,11 @@ body
     box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
 }
 
-.menuButton
+a.mainButtonLink
 {
+    text-decoration: none;
+    color: white;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 320px;  
@@ -43,24 +46,21 @@ body
     box-sizing: border-box;
 }
 
-.menuButton:hover,
-.logoutButton:hover
+a.secondaryButtonLink
 {
-    background-color: #2a4446;
-}
-
-.logoutButton
-{
+    text-decoration: none;
+    color: white;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 320px;  
-    height: 56px;
+    height: px;
     background-color: #4F7379;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
     padding: 12px 8px;
-    margin-top: 35px;
+    margin-top: 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -70,10 +70,19 @@ body
     box-sizing: border-box;
 }
 
-a.buttonLink
+
+a.mainButtonLink:hover,
+a.secondaryButtonLink:hover
 {
-    text-decoration: none;
-    color: white;
+    background-color: #2a4446;
+}
+
+a.mainButtonLink:focus,
+a.secondaryButtonLink:focus
+{
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
+	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
+	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 }
 
 h1.registrationWelcomeText
@@ -96,6 +105,18 @@ h1.mainMenuText
     color: #385A5C;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.form
+{
+    margin-top: 5px;
+}
+
+.icon
+{
+    text-align: center;
+    font-size: 90px;
+    color: white;
 }
 
 input[type=text],
@@ -122,7 +143,7 @@ input[type=password]:focus
 	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
     border: 2px solid black;
-    /*background-color: #dfdfdf;*/
+    background-color: #dfdfdf;
     color: black;  
 }
 
@@ -145,26 +166,14 @@ input[type=submit]
 
 input[type=submit]:focus
 {
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
-    -moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
-    box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(49, 46, 49, 0.8);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(49, 46, 49, 0.8);
+    box-shadow: 0px 0px 10px 3px rgba(49, 46, 49, 0.8);
 }
 
 input[type=submit]:hover
 {
     background-color: #2a4446;
-}
-
-.form
-{
-    margin-top: 5px;
-}
-
-.icon
-{
-    text-align: center;
-    font-size: 90px;
-    color: white;
 }
 
 input::-webkit-input-placeholder
