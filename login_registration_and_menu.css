@@ -6,20 +6,21 @@ body
     font-size: 20px;
 }
 
-.registrationAndLoginContainer
+.container
 {
     background-color: #E5D098;
     width: 320px;
-    padding: 35px 45px 45px 45px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+    padding: 45px 45px 45px 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
     -moz-box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
     box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
 }
-
 
 input[type=text],
 input[type=email],
@@ -78,18 +79,17 @@ input[type=submit]:hover
     background-color: #2a4446;
 }
 
-.registrationAndLoginContainer .form
+.form
 {
     margin-top: 5px;
 }
 
-.registrationAndLoginContainer .icon
+.icon
 {
     text-align: center;
     font-size: 90px;
     color: white;
 }
-
 
 input::-webkit-input-placeholder
 {
