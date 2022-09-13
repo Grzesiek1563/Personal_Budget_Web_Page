@@ -55,14 +55,26 @@ a.secondaryButtonLink
     background-color: #4F7379;  
 }
 
+a.cancelButton
+{
+    margin-top: 20px;
+    background-color: #4F7379;
+    width: 150px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
 a.mainButtonLink:hover,
-a.secondaryButtonLink:hover
+a.secondaryButtonLink:hover,
+a.cancelButton:hover
 {
     background-color: #2a4446;
 }
 
 a.mainButtonLink:focus,
-a.secondaryButtonLink:focus
+a.secondaryButtonLink:focus,
+a.cancelButton:focus
 {
     -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
@@ -206,6 +218,14 @@ textarea:focus
 #comment
 {
     resize: none;
+}
+
+.addExpense input[type=submit]
+{
+    display: block;
+    width: 150px;
+    float: left;
+    margin-right: 10px;
 }
 
 input[type=text],
