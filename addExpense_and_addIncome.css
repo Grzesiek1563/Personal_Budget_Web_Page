@@ -22,7 +22,7 @@ body
     box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
 }
 
-.buttonLink a
+a.mainButtonLink
 {
     text-decoration: none;
     color: white;
@@ -30,10 +30,13 @@ body
     margin-left: auto;
     margin-right: auto;
     width: 320px;  
+    height: 56px;
+    background-color: #000506;
     text-align: center;
     font-size: 22px;
     font-weight: 700;
     padding: 12px 8px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -43,46 +46,47 @@ body
     box-sizing: border-box;
 }
 
-a.mainButtonLink
-{
-    margin-top: 20px;
-    background-color: #000506;
-}
-
 a.secondaryButtonLink
-{ 
+{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;  
+    background-color: #4F7379;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 8px;
     margin-top: 30px;
-    background-color: #4F7379;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
 }
 
-a.cancelButton
-{
-    margin-top: 20px;
-    background-color: #4F7379;
-    width: 150px;
-    display: block;
-    float: left;
-    margin-left: 10px;
-}
 
 a.mainButtonLink:hover,
-a.secondaryButtonLink:hover,
-a.cancelButton:hover
+a.secondaryButtonLink:hover
 {
     background-color: #2a4446;
 }
 
 a.mainButtonLink:focus,
-a.secondaryButtonLink:focus,
-a.cancelButton:focus
+a.secondaryButtonLink:focus
 {
     -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 }
 
-h1
+h1.registrationWelcomeText
 {
+    font-size: 22px;
     text-align: center;
     font-family: 'Kalam', cursive;
     font-weight: 700;
@@ -91,17 +95,18 @@ h1
     margin-bottom: 10px;
 }
 
-h1#registrationWelcomeText
-{
-    font-size: 22px;
-}
-
-h1.menuText
+h1.mainMenuText
 {
     font-size: 42px;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    color: #385A5C;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.sheet
+.form
 {
     margin-top: 5px;
 }
@@ -113,126 +118,9 @@ h1.menuText
     color: white;
 }
 
-.row
-{
-    margin-top: 10px;
-}
-
-fieldset
-{ 
-    font-size: 22px;
-    font-weight: 700;
-    font-family: 'Mukta', sans-serif;
-    margin-top: 10px;
-    border: 2px solid #385A5C;
-    border-radius: 20px;
-}
-
-legend
-{
-    text-align: center;
-    color: #385A5C;
-    font-size: 20px;
-}
-
-.radioField
-{
-    color: #000506;
-}
-
-#expenseCategory
-{
-    color: #000506;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 320px;
-    height: 50px;  
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    outline: none;
-    font-family: 'Mukta', sans-serif;
-    box-sizing: border-box;
-}
-
-#expenseCategory:focus
-{
-    -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
-	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
-	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
-    width: 320px;
-    height: 50px;  
-    border: 2px solid #000506;
-    background-color: #dfdfdf;
-    color: black;
-}
-
-.categoryText
-{
-    color: #385A5C;
-    text-align: center;
-    font-family: 'Mukta', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-textarea
-{
-    display: block;
-    color: #000506;
-    margin-left: auto;
-    margin-right: auto;
-    width: 320px;
-    height: 85px;
-    font-size: 20px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-family: 'Mukta', sans-serif;
-    box-sizing: border-box;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-textarea:focus
-{
-    -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
-	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
-	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
-    width: 320px;
-    height: 85px;
-    border: 2px solid #000506;
-    background-color: #dfdfdf;
-    color: black;
-}
-
-#comment
-{
-    resize: none;
-}
-
-.addExpense input[type=submit]
-{
-    display: block;
-    width: 150px;
-    float: left;
-    margin-right: 10px;
-}
-
 input[type=text],
 input[type=email],
-input[type=password],
-input[type=number],
-input[type=date]
+input[type=password]
 {
     width: 320px;
     background-color: #efefef;
@@ -248,9 +136,7 @@ input[type=date]
 
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=password]:focus,
-input[type=number]:focus,
-input[type=date]:focus
+input[type=password]:focus
 {
     -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
@@ -276,7 +162,6 @@ input[type=submit]
     outline: none;
     font-family: 'Mukta', sans-serif;
 }
-
 
 input[type=submit]:focus
 {
