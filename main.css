@@ -8,14 +8,13 @@ body
 
 .container
 {
+    display: block;
     background-color: #E5D098;
     width: 320px;
     padding: 15px 45px 30px 45px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
     -moz-box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
