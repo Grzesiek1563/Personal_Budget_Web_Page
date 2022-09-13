@@ -171,6 +171,42 @@ legend
     margin-bottom: 5px;
 }
 
+textarea
+{
+    display: block;
+    color: #000506;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 85px;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+textarea:focus
+{
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
+	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
+	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
+    width: 320px;
+    height: 85px;
+    border: 2px solid #000506;
+    background-color: #dfdfdf;
+    color: black;
+}
+
+#comment
+{
+    resize: none;
+}
 
 input[type=text],
 input[type=email],
