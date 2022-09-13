@@ -43,7 +43,6 @@ body
     box-sizing: border-box;
 }
 
-
 a.mainButtonLink
 {
     margin-top: 20px;
@@ -55,8 +54,6 @@ a.secondaryButtonLink
     margin-top: 30px;
     background-color: #4F7379;  
 }
-
-
 
 a.mainButtonLink:hover,
 a.secondaryButtonLink:hover
@@ -109,7 +106,27 @@ h1.menuText
     margin-top: 10px;
 }
 
+fieldset
+{ 
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Mukta', sans-serif;
+    margin-top: 10px;
+    border: 2px solid #385A5C;
+    border-radius: 20px;
+}
 
+legend
+{
+    text-align: center;
+    color: #385A5C;
+    font-size: 20px;
+}
+
+.radioField
+{
+    color: #000506;
+}
 
 input[type=text],
 input[type=email],
