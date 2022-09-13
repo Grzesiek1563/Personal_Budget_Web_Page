@@ -22,7 +22,7 @@ body
     box-shadow: 0px 0px 48px 3px rgba(41,13,41,0.8);
 }
 
-.buttonLink a
+a.mainButtonLink
 {
     text-decoration: none;
     color: white;
@@ -30,10 +30,13 @@ body
     margin-left: auto;
     margin-right: auto;
     width: 320px;  
+    height: 56px;
+    background-color: #000506;
     text-align: center;
     font-size: 22px;
     font-weight: 700;
     padding: 12px 8px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -43,19 +46,28 @@ body
     box-sizing: border-box;
 }
 
-
-a.mainButtonLink
-{
-    margin-top: 20px;
-    background-color: #000506;
-}
-
 a.secondaryButtonLink
-{ 
+{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;  
+    background-color: #4F7379;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 8px;
     margin-top: 30px;
-    background-color: #4F7379;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
 }
-
 
 
 a.mainButtonLink:hover,
@@ -72,8 +84,9 @@ a.secondaryButtonLink:focus
 	box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 }
 
-h1
+h1.registrationWelcomeText
 {
+    font-size: 22px;
     text-align: center;
     font-family: 'Kalam', cursive;
     font-weight: 700;
@@ -82,17 +95,18 @@ h1
     margin-bottom: 10px;
 }
 
-h1#registrationWelcomeText
-{
-    font-size: 22px;
-}
-
-h1.menuText
+h1.mainMenuText
 {
     font-size: 42px;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    color: #385A5C;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.sheet
+.form
 {
     margin-top: 5px;
 }
@@ -104,18 +118,9 @@ h1.menuText
     color: white;
 }
 
-.row
-{
-    margin-top: 10px;
-}
-
-
-
 input[type=text],
 input[type=email],
-input[type=password],
-input[type=number],
-input[type=date]
+input[type=password]
 {
     width: 320px;
     background-color: #efefef;
@@ -131,9 +136,7 @@ input[type=date]
 
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=password]:focus,
-input[type=number]:focus,
-input[type=date]:focus
+input[type=password]:focus
 {
     -webkit-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
 	-moz-box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
@@ -159,7 +162,6 @@ input[type=submit]
     outline: none;
     font-family: 'Mukta', sans-serif;
 }
-
 
 input[type=submit]:focus
 {
