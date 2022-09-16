@@ -70,31 +70,31 @@ body
     box-shadow: 0px 0px 10px 3px rgba(41,13,41,0.8);
 }
 
-table
+.amountTable table
 {
     border-collapse: separate;
     text-align: center;
-    margin: 0 auto;  
-    border-color: #000506; 
+    margin: 0 auto;   
 }
 
-thead
+.amountTable thead
 {
     color: white;
     background-color: #000506;
 }
 
-tbody tr
+.amountTable tbody tr
 {
     background-color: #4F7379;
     color: white; 
 }
 
-tbody td
+.amountTable tbody td
 {
     background-color: white;
     color: #000506;
     border-radius: 10px;
+    width: 250px;
 }
 
 .amountTable th
@@ -104,3 +104,20 @@ tbody td
     border-radius: 10px;
 }
 
+.amountTable h2
+{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.summaryTable tbody td
+{
+    height: 57px;
+}
+
+#balance
+{
+    background-color: rgb(45, 120, 45);
+}
