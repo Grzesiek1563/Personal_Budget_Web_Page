@@ -2,17 +2,192 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	
-	<title></title>
+	<title>Bilans</title>
 	
-	<meta name="description" content="Opis w Google" />
-	<meta name="keywords" content="słowa, kluczowe, wypisane, po, przecinku" />
-	
+	<meta name="description" content="Przeglądaj bilans z wybranego okresu"/>
+	<meta name="keywords" content="bilans, wydatki, przychody, budżet, budżet osobisty, prowadzenie budżetu" />
+
+	<link rel="stylesheet" href="showBalance.css" type="text/css"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Expense', 'Amount'],
+          ['Jedzenie',     1],
+          ['Mieszkanie',      1],
+          ['Transport',  1],
+          ['Telekomunikacja', 1],
+          ['Opieka zdrowotna', 1],
+          ['Ubranie',    1],
+          ['Higiena',    1],
+          ['Dzieci',    1],
+          ['Rozrywka',    1],
+          ['Wycieczka',    1],
+          ['Szkolenia',    1],
+          ['Książki',    1],
+          ['Oszczędności',    1],
+          ['Na emeryturę',    1],
+          ['Spłata długów',    1],
+          ['Darowizna',    1],
+          ['Inne wydatki',    1]
+        ]);
+
+        var options = {
+          backgroundColor: '#E5D098', chartArea: {width:'100%',height:'100%', top:0, left: 0}, 
+		  legend:{position: 'right', alignment: 'center', textStyle:{fontSize: 16, fontName:'Mukta'}}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pieChart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+		
 </head>
 
 <body>
-	
+	<main>
+		<div class="container">
+			<header>
+				<div id="headline">
+					<h1>Bilans</h1>
+					<select name="timePeriod" id="timePeriod">
+						<option value="1" selected>Bieżący miesiąc</option>
+						<option value="2">Poprzedni miesiąc</option>
+						<option value="3">Bieżący rok</option>
+						<option value="4">Niestandardowy</option>
+					</select>
+				</div>
+			</header>
+			<article>
+				<div class="amountTable">
+					<table >
+						<thead>
+							<tr>
+								<th>Kategoria przychodu</th> <th>Suma (zł)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Wynagrodzenie</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Odsetki bankowe</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Sprzedaż na allegro</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Inne</th> <td>0.00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</article>
+			<article>
+				<div class="amountTable">
+					<table >
+						<thead>
+							<tr>
+								<th>Kategoria wydatku</th> <th>Suma (zł)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Jedzenie</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Mieszkanie</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Transport</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Telekomunikacja</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Opieka zdrowotna</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Ubranie</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Higiena</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Dzieci</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Rozrywka</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Wycieczka</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Szkolenia</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Książki</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Oszczędności</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Na emeryturę</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Spłata długów</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Darowizna</th> <td>0.00</td>
+							</tr>
+							<tr>
+								<th>Inne wydatki</th> <td>0.00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</article>
+			<article>
+				<div class="amountTable">
+					<table id="summaryTable">
+						<thead>
+							<tr>
+								<th colspan="3">Podsumowanie</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Suma przychodów</th> <th>Suma wydatków</th> <th id="balance">Bilans</th>
+							</tr>
+							<tr>
+								<td>0.00</td> <td>0.00</td> <td>0.00</td>
+							</tr>
+						</tbody>
+					</table>
+					<h2>Gratulacje. Świetnie zarządzasz finansami!</h2>
+				</div>
+			</article>
+			<article>
+				<div id="pieChartBackground">
+					<h2>Twoje wydatki</h2>
+					<div id="pieChart"></div>			
+				</div>
+			</article>
+		</div>
+	</main>
 	
 </body>
 </html>
+
