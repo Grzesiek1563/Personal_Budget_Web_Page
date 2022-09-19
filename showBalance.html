@@ -14,6 +14,45 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Expense', 'Amount'],
+          ['Jedzenie',     1],
+          ['Mieszkanie',      1],
+          ['Transport',  1],
+          ['Telekomunikacja', 1],
+          ['Opieka zdrowotna', 1],
+          ['Ubranie',    1],
+          ['Higiena',    1],
+          ['Dzieci',    1],
+          ['Rozrywka',    1],
+          ['Wycieczka',    1],
+          ['Szkolenia',    1],
+          ['Książki',    1],
+          ['Oszczędności',    1],
+          ['Na emeryturę',    1],
+          ['Spłata długów',    1],
+          ['Darowizna',    1],
+          ['Inne wydatki',    1]
+        ]);
+
+        var options = {
+          backgroundColor: '#E5D098', chartArea: {width:'100%',height:'100%', top:0, left: 0}, 
+		  legend:{position: 'right', alignment: 'center', textStyle:{fontSize: 16, fontName:'Mukta'}}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pieChart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 		
 </head>
 
@@ -122,7 +161,7 @@
 			</article>
 			<article>
 				<div class="amountTable">
-					<table class="summaryTable">
+					<table id="summaryTable">
 						<thead>
 							<tr>
 								<th colspan="3">Podsumowanie</th>
@@ -140,7 +179,12 @@
 					<h2>Gratulacje. Świetnie zarządzasz finansami!</h2>
 				</div>
 			</article>
-			
+			<article>
+				<div id="pieChartBackground">
+					<h2>Twoje wydatki</h2>
+					<div id="pieChart"></div>			
+				</div>
+			</article>
 		</div>
 	</main>
 	

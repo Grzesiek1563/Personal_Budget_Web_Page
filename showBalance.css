@@ -57,7 +57,8 @@ body
     color: black;
 }
 
-.amountTable
+.amountTable,
+#pieChartBackground
 {
     background-color: #E5D098;
     padding: 25px;
@@ -112,7 +113,7 @@ body
     margin-bottom: 0;
 }
 
-.summaryTable tbody td
+#summaryTable tbody td
 {
     height: 57px;
 }
@@ -121,3 +122,22 @@ body
 {
     background-color: rgb(45, 120, 45);
 }
+
+
+#pieChartBackground h2
+{
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+#pieChart
+{
+    width: 500px;
+    height: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
